@@ -8,9 +8,9 @@ export default function Aside() {
         async function fetchData() {
             const data = await getMostPopular();
             if (data && data.results) {
-                // Shuffle (embaralhar) o array
+
                 const shuffled = [...data.results].sort(() => Math.random() - 0.5);
-                // Pegue as 3 primeiras notícias aleatórias
+                
                 setNewsList(shuffled.slice(0, 3));
             }
         }
